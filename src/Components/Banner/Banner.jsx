@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between mt-16 items-center px-3">
       <div className="md:w-2/4 space-y-4">
-        <h2 className="text-[#E3FEF7] text-[28px] md:text-5xl font-bold">
+        <h2 className="text-[#E3FEF7] text-[28px] md:3xl lg:text-5xl font-bold">
           Alomgir Hasan SHAKIB
         </h2>
         <p className="text-2xl md:text-4xl font-bold text-cyan-700">
