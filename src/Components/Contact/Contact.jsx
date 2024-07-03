@@ -1,14 +1,44 @@
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import SectionTitle from "../sectionTitle/SectionTitle";
+import TextField from "@mui/material/TextField";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_221457", "template_221457ah", form.current, {
+        publicKey: "L7MoZxDExNIdjAoQu",
+      })
+      .then(
+        () => {
+          toast.success("Message Send successfull!");
+          e.target.user_name.value = "";
+          e.target.user_email.value = "";
+          e.target.user_mobile_number.value = "";
+          e.target.message.value = "";
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Message not Send!");
+        }
+      );
+  };
+
   return (
     <>
       <SectionTitle title="Contact me"></SectionTitle>
-      <div className="mb-16 mt-24 flex flex-col md:flex-row h-96 " id="contact">
-        <div className="bg-black md:w-[40%] flex flex-col justify-between items-center p-5 rounded-tl-lg rounded-bl-lg">
+      <ToastContainer />
+      <div className="mb-16 mt-24 flex flex-col md:flex-row  " id="contact">
+        <div className="bg-black md:w-[40%] flex flex-col justify-between gap-10 items-center p-5 rounded-tl-lg rounded-bl-lg">
           <div>
-            <h2 className="text-3xl font-bold text-slate-50 uppercase">
+            <h2 className=" text-xl md:text-3xl font-bold text-slate-50 uppercase">
               Contact Information
             </h2>
             <p className="text-slate-500 font-semibold mt-5 text-center">
@@ -16,7 +46,7 @@ const Contact = () => {
             </p>
           </div>
           <div>
-            <h3 className="flex items-center gap-4 text-teal-300">
+            <h3 className="flex items-center gap-2 md:gap-4 text-teal-300">
               {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +59,7 @@ const Contact = () => {
               </svg>
               Mobile: 01305801580
             </h3>
-            <h3 className="flex items-center gap-4 text-teal-300">
+            <h3 className="flex items-center gap-2 md:gap-4 text-teal-300">
               {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +72,7 @@ const Contact = () => {
               </svg>{" "}
               Email: alomgirhasanshakib@gmail.com
             </h3>
-            <h3 className="flex items-center gap-4 text-teal-300">
+            <h3 className="flex items-center gap-2 md:gap-4 text-teal-300">
               {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +110,57 @@ const Contact = () => {
           </div>
         </div>
         <div className="bg-slate-50 md:w-[60%] rounded-tr-lg rounded-br-lg">
-          white
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="flex flex-col md:flex-row gap-5 items-center justify-center p-10">
+              <TextField
+                className="w-full"
+                id="standard-basic"
+                label="Your Name"
+                name="user_name"
+                variant="standard"
+              />
+            </div>
+            <div className="flex flex-col md:flex-row gap-5 items-center justify-center p-10">
+              <TextField
+                className="w-full"
+                id="standard-basic"
+                label="Email"
+                type="email"
+                name="user_email"
+                variant="standard"
+              />
+              <TextField
+                className="w-full"
+                id="outlined-number"
+                label="Mobile Number"
+                type="number"
+                name="user_mobile_number"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                variant="standard"
+              />
+            </div>
+            <div className="p-10">
+              <TextField
+                className="w-full"
+                id="standard-multiline-flexible"
+                label="Your Message"
+                placeholder="Write Your Message Here"
+                name="message"
+                multiline
+                maxRows={4}
+                variant="standard"
+              />
+            </div>
+            <div className="flex flex-col md:flex-row gap-5 items-center justify-end p-10">
+              <input
+                type="submit"
+                value="Send Message"
+                className="bg-teal-600 text-white rounded-lg hover:bg-teal-500 px-4 py-2"
+              />
+            </div>
+          </form>
         </div>
       </div>
     </>

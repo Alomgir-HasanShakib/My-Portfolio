@@ -4,6 +4,7 @@ import Contact from "../Components/Contact/Contact"
 import Footer from "../Components/Footer/Footer"
 import Navbar from "../Components/Navbar/Navbar"
 import Projects from "../Components/Projects/Projects"
+import Skill from "../Components/skills/Skill"
 
 const Root = () => {
   return (
@@ -11,6 +12,7 @@ const Root = () => {
       <Navbar></Navbar>
       <Banner></Banner>
       <About></About>
+      <Skill></Skill>
       <Projects></Projects>
       <Contact></Contact>
       <Footer></Footer>

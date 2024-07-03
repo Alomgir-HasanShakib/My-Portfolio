@@ -24,6 +24,9 @@ const Navbar = () => {
               <a href="">Home</a>
             </li>
             <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
+              <a href="#about">About</a>
+            </li>
+            <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
               <a href="">skill</a>
             </li>
             <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
@@ -32,9 +35,7 @@ const Navbar = () => {
             <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
               <a href="">contact</a>
             </li>
-            <li className="text-teal-100 cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500  hover:bg-gradient-to-r hover:from-blue-700 hover:to-cyan-700 rounded-full border-none transition duration-300 ease-in">
-              <a download={cv}>Download cv</a>
-            </li>
+            
           </ul>
         </div>
         <a className="bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl md:text-4xl font-semibold uppercase ">
@@ -44,7 +45,10 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal uppercase text-xl text-teal-400 ">
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
-            <a href="#">Home</a>
+            <a href="">Home</a>
+          </li>
+          <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
+            <a href="#about">About</a>
           </li>
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
             <a href="#skills">skill</a>
