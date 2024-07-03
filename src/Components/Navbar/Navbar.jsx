@@ -38,27 +38,29 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl md:text-4xl font-semibold uppercase ">
-        Shakib
+          Shakib
         </a>
       </div>
-      <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 uppercase text-xl text-teal-400 font-semibold ">
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal uppercase text-xl text-teal-400 ">
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
             <a href="">Home</a>
           </li>
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
             <a href="">skill</a>
           </li>
-          <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
-            <a href="">Projects</a>
+          <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none ">
+            <a href="#projects">Projects</a>
           </li>
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
             <a href="">contact</a>
           </li>
-          <li className="ml-3 text-teal-100 cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500  hover:bg-gradient-to-r hover:from-blue-700 hover:to-cyan-700 rounded-full border-none transition duration-300 ease-in">
-            <a href={cv}>Download cv</a>
-          </li>
         </ul>
+      </div>
+      <div className="navbar-end">
+        <button className="ml-2 px-3 py-1 md:px-4 md:py-2  text-teal-100 cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500  hover:bg-gradient-to-r hover:from-blue-700 hover:to-cyan-700 rounded-full border-none transition duration-1000 ease-in-out">
+          <a href={cv}>Download CV</a>
+        </button>
       </div>
     </div>
   );
