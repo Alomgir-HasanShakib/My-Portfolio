@@ -30,7 +30,7 @@ const Projects = () => {
         description='Your Homies is a premier real estate platform designed to offer users a streamlined property browsing experience. The website features an intuitive interface, allowing users to explore an extensive array of property listings, complete with detailed descriptions, high-resolution images, and essential details such as pricing and specifications.'
         clientRepoLink='https://github.com/Alomgir-HasanShakib/craft_ease_client-side'
         liveLink='https://craft-ease.web.app'
-        serverRepoLink='https://github.com/Alomgir-HasanShakib/craft_ease_client-side'
+        serverRepoLink='https://github.com/Alomgir-HasanShakib/craft_ease_server-side'
         technology="html -> react js -> tailwind css -> nodejs -> express js -> mongoDB -> firebase auth -> firebase hosting ->react hook-form"
         ></Card>
       </div>

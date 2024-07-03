@@ -44,16 +44,16 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal uppercase text-xl text-teal-400 ">
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
-            <a href="">Home</a>
+            <a href="#">Home</a>
           </li>
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
-            <a href="">skill</a>
+            <a href="#skills">skill</a>
           </li>
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none ">
             <a href="#projects">Projects</a>
           </li>
           <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
-            <a href="">contact</a>
+            <a href="#contact">contact</a>
           </li>
         </ul>
       </div>
