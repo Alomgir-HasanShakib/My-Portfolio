@@ -1,10 +1,12 @@
-
 import { FaArrowRight, FaDownload } from "react-icons/fa";
 import cv from "../../assets/cv.pdf";
 
 const About = () => {
   return (
-    <div className="flex justify-between gap-5 flex-col md:flex-row mt-24 mb-24 items-center" id="about">
+    <div
+      className="flex justify-between gap-5 flex-col md:flex-row mt-24 mb-24 items-center"
+      id="about"
+    >
       <div className="w-[50%]">
         <img src="https://i.postimg.cc/3wnbv3b7/About-Me.png" alt="" />
       </div>
@@ -50,11 +52,22 @@ const About = () => {
           </tbody>
         </table>
         <button className="ml-2 px-3 py-1 md:px-4 md:py-2  text-teal-100 cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500  hover:bg-gradient-to-r hover:from-blue-700 hover:to-cyan-700 rounded-full border-none transition duration-1000 ease-in-out">
-          <a href={cv} className="
-          flex items-center gap-2">Download CV<FaDownload></FaDownload></a>
+          <a
+            href={cv}
+            className="
+          flex items-center gap-2"
+          >
+            Download CV<FaDownload></FaDownload>
+          </a>
         </button>
         <button className="ml-2 px-3 py-1 md:px-4 md:py-2  text-teal-100 cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500  hover:bg-gradient-to-r hover:from-blue-700 hover:to-cyan-700 rounded-full border-none transition duration-1000 ease-in-out">
-          <a href={cv} className="flex items-center gap-2">GitHub <FaArrowRight></FaArrowRight></a>
+          <a
+            href="https://github.com/Alomgir-HasanShakib"
+            target="_blank"
+            className="flex items-center gap-2"
+          >
+            GitHub <FaArrowRight></FaArrowRight>
+          </a>
         </button>
       </div>
     </div>

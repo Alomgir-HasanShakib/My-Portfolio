@@ -2,6 +2,7 @@ import cv from "../../assets/cv.pdf";
 
 const Navbar = () => {
   return (
+    // navbar from daisy ui!
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
@@ -35,7 +36,6 @@ const Navbar = () => {
             <li className="hover:text-teal-200 cursor-pointer hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-none">
               <a href="">contact</a>
             </li>
-            
           </ul>
         </div>
         <a className="bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl md:text-4xl font-semibold uppercase ">
